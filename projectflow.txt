@@ -21,3 +21,7 @@
 14. Now make changes to code1.py to append a new row in data, check changes via "dvc status"
 15. Now "dvc commit" and "dvc push"
 16. Do git add-commit-push
+
+git log --oneline
+git checkout <sha-id>
+dvc pull
