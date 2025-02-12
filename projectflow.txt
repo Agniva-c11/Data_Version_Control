@@ -3,4 +3,13 @@
 3. Do a git add-commit-push before initialising DVC
 # pip instal dvc
 4. Now we do "dvc init" (creates .dvcignore, .dvc)
-
+5. "mkdir s3" (creates a folder called s3)
+6. "dvc remote add -d myremote s3(will paste the url of the s3 bucket if using AWS-S3)"
+7. Now initiate dvc to track the datasets within the "data" folder. For that the commands:
+    "dvc add data/"
+    Error:"data" is already tracked by git, to remove it:
+    git rm -r --cached 'data'
+    git commit -m "stop tracking data"
+    Again run "dvc add data/
+8. To track the changes with git, run
+    git add data.dvc .gitignore
